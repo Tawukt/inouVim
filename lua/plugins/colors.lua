@@ -40,9 +40,9 @@ return {
         enabled = true,
         config = function()
             local configs = require('colorizer')
-            configs.setup({
-                "*",
-                DEFAULT_OPTIONS = {
+            configs.setup(
+                { "*" },
+                {
                     RGB      = true;         -- #RGB hex codes
                     RRGGBB   = true;         -- #RRGGBB hex codes
                     names    = false;         -- "Name" codes like Blue
@@ -53,8 +53,8 @@ return {
                     css_fn   = true;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
                     -- Available modes: foreground, background
                     mode     = 'background'; -- Set the display mode.
-                },
-            })
+                }
+            )
         end
     },
 }
