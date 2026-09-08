@@ -29,8 +29,8 @@ set.termguicolors = true
 --set.signcolumn = "yes"
 
 
-
-
+-- faster cursor hold
+set.updatetime = 50
 
 
 -- 80th column
@@ -59,5 +59,3 @@ set.termguicolors = true
 -- incremental search
 --set.incsearch = true
 --
--- faster cursor hold
---set.updatetime = 50

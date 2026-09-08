@@ -1,31 +1,20 @@
-
+local function enable_transparency()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
 return {
     {
-        'uZer/pywal16.nvim',
-        enabled = true,
-        config = function()
-            vim.cmd.colorscheme("pywal16")
-        end,
-    },
-    {
         'folke/tokyonight.nvim',
-        enabled = true,
-        config = function()
-            vim.cmd.colorscheme 'tokyonight'
-        end,
-    },
-    { "zaldih/themery.nvim",
         lazy = false,
         enabled = true,
         config = function()
-            require("themery").setup({
-                themes = {"pywal16", "tokyonight"}, 
-                livePreview = true, -- Apply theme while picking. Default to true.
-            })
-        end
+            vim.cmd.colorscheme 'tokyonight-moon'
+            enable_transparency()
+        end,
     },
     {
         'nvim-lualine/lualine.nvim',
+        enabled = true,
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('lualine').setup({
@@ -55,6 +44,23 @@ return {
                     mode     = 'background'; -- Set the display mode.
                 }
             )
+        end
+    },
+    {
+        'uZer/pywal16.nvim',
+        enabled = false,
+        config = function()
+            vim.cmd.colorscheme("pywal16")
+        end,
+    },
+    { "zaldih/themery.nvim",
+        lazy = false,
+        enabled = false,
+        config = function()
+            require("themery").setup({
+                themes = {"pywal16", "tokyonight"}, 
+                livePreview = true, -- Apply theme while picking. Default to true.
+            })
         end
     },
 }

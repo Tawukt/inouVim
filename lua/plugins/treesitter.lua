@@ -9,9 +9,11 @@ return{
                 indent = { enable = true }, 
                 highlight = { enable = true }, 
                 folds = { enable = true }, 
+                auto_install = true,
                 ensure_installed = {
                     "bash",
                     "c",
+                    "css",
                     "diff",
                     "html",
                     "help",
@@ -34,8 +36,9 @@ return{
                     "vimdoc",
                     "xml",
                     "yaml",
+                    "gitignore",
+                    "dockerfile"
                 },
-                auto_install = false,
             })
         end
     }
